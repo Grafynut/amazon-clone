@@ -42,13 +42,12 @@
             position: absolute;
             bottom: 0;
             transform: translateY(100%);
-            left: 11rem;
-            width: 60.2vw;
+            left: 13rem;
 
             .suggetion_item {
                 background: #fff;
                 padding: 0.3rem 1rem;
-                font-size: 1.4rem;
+                font-size: 1.6rem;
                 box-shadow: inset 0 0 0 0.5px #ccc;
                 transition: 0.2s;
                 cursor: pointer;
@@ -76,6 +75,8 @@
             width: max-content;
             height: 100%;
             padding-left: 0.8rem;
+            text-transform: capitalize;
+            font-size: 1.5rem;
 
             .option {
                 min-width: 20rem !important;
@@ -99,7 +100,7 @@
 
             .Search_btn {
                 width: max-content;
-                height: max-content;
+                height: auto;
                 background-color: #f3a847;
                 display: grid;
                 place-items: center;

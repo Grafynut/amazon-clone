@@ -15,8 +15,10 @@ html {
 a {
   text-decoration: none;
   color: initial;
+  font-size: inherit;
 }
 
 body {
   background-color: #eaeded;
+  font-size: 1.5rem;
 }

@@ -62,28 +62,94 @@
         font-size: 50%;
     }
 
+    p {
+        font-size: 1.5rem !important;
+    }
+
     // payment cart
     .payment {
         max-width: 80% !important;
         min-height: 70vh !important;
     }
+
+    //home
+    .home {
+        .body_content_start {
+            .card_row {
+                .card {
+                    .Card_Image {
+                        .details {
+                            font-size: 1.5rem !important;
+                        }
+                    }
+
+                    .para {
+                        font-size: 1.5rem !important;
+                    }
+                }
+            }
+
+            .product_list .para {
+                font-size: 1.5rem !important;
+            }
+
+        }
+    }
+
+    // full deatils
+    .container {
+        .fullContainer {
+            .details_info {
+                .info {
+
+                    .product_details {
+                        .table {
+                            tr {
+                                td:first-child {
+                                    font-size: 1.5rem !important;
+                                }
+
+                                td:last-child {
+                                    font-size: 1.5rem !important;
+                                }
+                            }
+                        }
+
+                        ul li {
+                            font-size: 1.5rem !important;
+                        }
+                    }
+                }
+
+            }
+
+
+        }
+    }
 }
 
 @media screen and (max-width: 575px) {
+
     html {
-        font-size: 45%;
+        font-size: 55%;
     }
 
     //header ----
     .header {
         display: flex;
         flex-wrap: wrap;
-        height: 12rem !important;
+        height: 13rem !important;
         padding: 1rem 1.5rem !important;
         gap: 1rem;
 
+        .hideCetagoryTab {
+            width: 0 !important;
+            visibility: hidden;
+            animation: hideCetagoryTab 0.2s linear 1;
+        }
+
         .search_box {
-            height: 4rem !important;
+            height: 5rem !important;
         }
 
         .header_nav {
@@ -92,32 +158,68 @@
             right: 1.5rem;
             height: auto !important;
         }
+
+        .suggetion_box {
+            position: absolute !important;
+            height: 9.5rem !important;
+
+            .search_suggetion {
+                left: 1.5rem !important;
+                width: 80vw !important;
+                bottom: -0.5rem !important;
+
+                .suggetion_item {
+                    font-size: 1.5rem !important;
+
+                }
+            }
+        }
     }
 
     //slider
     .home {
         .slide {
-            top: 12rem !important;
+            top: 13rem !important;
+        }
+
+        .slide_area {
+            .banner {
+                transform: scale(1.75) !important;
+            }
         }
 
         .body_content_start {
-            margin-top: 22% !important;
+            margin-top: 26% !important;
 
             .card_row {
-                flex-direction: unset !important;
-                flex-wrap: wrap;
+                flex-direction: column !important;
 
                 .card {
-                    width: calc(50% - 0.75rem) !important;
+                    width: 100% !important;
                     padding-bottom: 5rem !important;
 
-                    &:last-child {
-                        width: 100% !important;
+                    .Card_Image {
+                        .card_image {
+                            max-width: 18.3rem;
+                        }
                     }
 
+                    .para {
+                        font-size: 1.5rem !important;
+                    }
+                }
+            }
+
+            .product_list {
+                .card .Card_Image .price_and_discount .actual_price {
+                    font-size: 1.5rem !important;
                 }
 
+                .para {
+                    font-size: 1.5rem !important;
+                }
             }
+
         }
     }
 
@@ -138,16 +240,60 @@
             box-shadow: 1.5rem 1.3rem 1.3rem 0 #00000026;
             transition: 0.3s;
             overflow: hidden;
+
+            .filter_using_box {
+                .inputbox {
+                    span {
+                        font-size: 1.5rem;
+                    }
+                }
+
+                h5 {
+                    font-size: 1.8rem;
+                }
+
+                input {
+                    padding: 0.5rem;
+                    font-size: 1.4rem;
+                }
+
+                span {
+                    font-size: 1.4rem;
+                }
+            }
+
         }
 
         .addFilter {
             width: 50% !important;
             opacity: 1;
+            animation: fadein 0.3s linear 1;
+
+            @keyframes fadein {
+                0% {
+                    opacity: 0;
+                }
+
+                100% {
+                    opacity: 1;
+                }
+            }
         }
 
         .removeFilter {
             width: 0 !important;
             opacity: 0;
+            animation: fadeout 0.1s linear 1;
+
+            @keyframes fadeout {
+                0% {
+                    opacity: 1;
+                }
+
+                100% {
+                    opacity: 0;
+                }
+            }
         }
 
         .all_products_List {
@@ -222,6 +368,40 @@
 
             .details_info {
                 width: 100% !important;
+
+                .info {
+                    .price {
+                        .discount_price {
+                            font-size: 2.4rem !important;
+                        }
+
+                        .actual_price_and_offer {
+                            font-size: 2rem !important;
+                        }
+                    }
+
+                    .add_to_card {
+                        .add_to_card_btn {
+                            padding: 1rem 5rem !important;
+                            font-size: 1.6rem !important;
+                        }
+
+                        .quantity {
+                            font-size: 2.5rem;
+
+                            .quItem {
+                                width: 4.2rem !important;
+                                font-size: inherit !important;
+
+                            }
+
+                            .selected_number {
+                                font-size: inherit !important;
+                            }
+                        }
+                    }
+                }
+
             }
 
 
@@ -232,6 +412,10 @@
     .cart_item {
         display: flex !important;
         flex-direction: column;
+
+        .card_product_noty {
+            font-size: 3rem !important;
+        }
 
         .product,
         .Item_total {
@@ -262,7 +446,7 @@
 
 @media screen and (max-width: 450px) {
     html {
-        font-size: 43%;
+        font-size: 50%;
     }
 
     //slider
@@ -317,7 +501,7 @@
 
 @media screen and (max-width: 375px) {
     html {
-        font-size: 38%;
+        font-size: 48%;
     }
 }
 
@@ -326,52 +510,4 @@
         font-size: 30%;
     }
 
-    //slider
-    // .home {
-    //     .slide {
-    //         &::after {
-    //             height: 36% !important;
-    //         }
-
-    //         .slide_area {
-    //             .banner {
-    //                 transform: scale(1.6);
-    //             }
-    //         }
-
-    //         .left,
-    //         .right {
-    //             padding: 6rem 1.5rem !important;
-
-    //             .Control_icon {
-    //                 font-size: 3rem !important;
-    //             }
-    //         }
-    //     }
-
-    //     // home scroll card 
-    //     .body_content_start {
-    //         .product_list {
-    //             .card_row {
-    //                 .card {
-    //                     padding: 2rem !important;
-
-    //                     .Card_Image {
-    //                         width: 16rem !important;
-
-    //                         .card_image_box {
-    //                             height: 15rem !important;
-    //                         }
-
-    //                         .details {
-    //                             line-height: 2rem;
-    //                         }
-    //                     }
-
-    //                 }
-
-    //             }
-    //         }
-    //     }
-    // }
 }

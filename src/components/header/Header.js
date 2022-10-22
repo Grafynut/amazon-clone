@@ -11,11 +11,12 @@ import ContentFullDetails from '../ContentFullDetails';
 function Header() {
     const [{ basket, user }, dispatch] = useStateValue();
     const allContent = Content.search;
-    const [searchValue, setsearchValue] = useState('')
-    const history = useNavigate();
-    const catagories = [];
+    const [searchValue, setsearchValue] = useState('')// search value
+    const history = useNavigate(); // location change
+    const catagories = []; // cetagory 
     const [filterCatValue, setFilterCatValue] = useState([]);
     const allCetagory = Object.keys(ContentFullDetails);
+    const [searchSeuggetionWidth, setSearchSeuggetionWidth] = useState(0)
 
     //location url query
     const params = new Proxy(new URLSearchParams(window.location.search), {
@@ -28,9 +29,16 @@ function Header() {
             auth.signOut();
         }
     }
-
+    // search input
     const handleSearch = (e) => {
         setsearchValue(e.target.value);
+        const width = e.target.offsetWidth;
+        setSearchSeuggetionWidth(width)
+    }
+
+    //search buton click
+    const handleOnSearchButtonCLick = () => {
+        window.location.replace(`/search/productdetails?searchvalue=${searchValue.replace(" ", "%20")}`);
     }
 
     // payment and order path set
@@ -89,7 +97,7 @@ function Header() {
             {/* search box */}
             <div className='suggetion_box'>
                 {searchValue.length > 0 &&
-                    <div className='search_suggetion'>
+                    <div className='search_suggetion' style={{ width: `${searchSeuggetionWidth}px` }}>
                         {
                             filterCatValue?.map((element, i) => {
                                 return <a href={`/search/productdetails?searchvalue=${element.replace(" ", "%20")}`} key={i}><div className='suggetion_item' data-value={element} onClick={handleSearchValue}  >{element}</div></a>
@@ -99,7 +107,7 @@ function Header() {
             </div>
 
             <div className='search_box'>
-                <select className='select_box' value={cetValue ? cetValue : "All Categories"} onChange={handleAllCetagory} >
+                <select className={searchValue.length > 0 ? 'select_box hideCetagoryTab' : 'select_box'} value={cetValue ? cetValue : "All Categories"} onChange={handleAllCetagory} >
                     <option className='option' disabled value={"All Categories"} >All Categories</option>
                     {allCetagory.map((elem, i) => {
                         return <option className='option' value={elem} key={i} >{elem}</option>
@@ -107,7 +115,7 @@ function Header() {
                 </select>
                 <div className='input_searchBox'>
                     <input type='text' className='header_searchbar' value={searchValue} onChange={handleSearch} />
-                    <div className='Search_btn'>
+                    <div className='Search_btn' onClick={handleOnSearchButtonCLick}>
                         <Search className='searchIcon' />
                     </div>
                 </div>
