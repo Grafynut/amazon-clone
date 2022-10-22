@@ -5,12 +5,15 @@ import { ArrowBackIosNewOutlined, ArrowForwardIosOutlined } from '@mui/icons-mat
 function Slide() {
     const bannerImage = Content.banner;
     const slidePercent = 100 / bannerImage.length;
-    let width = window.innerWidth;
+    const [width, setWidth] = useState(window.innerWidth);
 
     const [slideValue, setSlideValue] = useState(0);
 
     let i = 0;
     useEffect(() => {
+        window.onresize = () => {
+            setWidth(window.innerWidth);
+        }
         let interval = setInterval(() => {
             if (i > 200) { clearInterval(interval); return }
             setSlideValue((prev) => {
@@ -43,12 +46,6 @@ function Slide() {
             return prev - slidePercent;
         });
     };
-
-    useEffect(() => {
-        window.onresize = () => {
-            width = window.innerWidth;
-        }
-    }, [width])
 
     return (
         <div className='slide'>
