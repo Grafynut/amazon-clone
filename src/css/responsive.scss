@@ -72,6 +72,23 @@
         min-height: 70vh !important;
     }
 
+    // login page
+    .login_container .login_form_container {
+        .login_form {
+            .inputBox {
+                font-size: 1.6rem;
+            }
+
+            .loginBtn {
+                font-size: 1.5rem !important;
+            }
+
+            .singUp_btn_section .account_create_btn {
+                font-size: 1.5rem !important;
+            }
+        }
+    }
+
     //home
     .home {
         .body_content_start {

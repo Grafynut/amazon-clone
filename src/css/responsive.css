@@ -39,6 +39,15 @@
     max-width: 80% !important;
     min-height: 70vh !important;
   }
+  .login_container .login_form_container .login_form .inputBox {
+    font-size: 1.6rem;
+  }
+  .login_container .login_form_container .login_form .loginBtn {
+    font-size: 1.5rem !important;
+  }
+  .login_container .login_form_container .login_form .singUp_btn_section .account_create_btn {
+    font-size: 1.5rem !important;
+  }
   .home .body_content_start .card_row .card .Card_Image .details {
     font-size: 1.5rem !important;
   }
