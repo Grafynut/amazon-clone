@@ -55,19 +55,19 @@
         }
     }
 
+    .product_not_found {
+        font-size: 5rem;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
     .all_products_List {
         border-left: 1px solid #ccc;
         background: #fff;
         height: auto;
         width: 85%;
-
-        .product_not_found {
-            font-size: 5rem;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-        }
 
         .product_section {
             width: 100%;

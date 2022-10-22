@@ -52,18 +52,18 @@
   display: inline-flex;
   gap: 0.5rem;
 }
-.all_products .all_products_List {
-  border-left: 1px solid #ccc;
-  background: #fff;
-  height: auto;
-  width: 85%;
-}
-.all_products .all_products_List .product_not_found {
+.all_products .product_not_found {
   font-size: 5rem;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+.all_products .all_products_List {
+  border-left: 1px solid #ccc;
+  background: #fff;
+  height: auto;
+  width: 85%;
 }
 .all_products .all_products_List .product_section {
   width: 100%;

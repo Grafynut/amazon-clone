@@ -172,10 +172,8 @@ function Products() {
                 />
             </div>
             <div className='all_products_List'>
+                {productList !== null ? productList.length < 1 ? <div className='product_not_found'>No Product found</div> : null : null}
                 <div className='product_section'>
-
-                    {productList !== null ? productList.length < 1 ? <div className='product_not_found'>No Product found</div> : null : null}
-
                     {
                         productList?.map((item, i) => {
                             return (

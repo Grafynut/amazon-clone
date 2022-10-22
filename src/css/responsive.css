@@ -127,6 +127,9 @@
   .all_products .filter_button {
     display: block !important;
   }
+  .all_products .product_not_found {
+    font-size: 2rem !important;
+  }
   .all_products .filter_section {
     position: absolute;
     width: 50% !important;
