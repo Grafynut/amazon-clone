@@ -1,0 +1,97 @@
+.login_container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding-top: 1.5rem;
+  background-color: #fff;
+}
+.login_container .logo {
+  max-width: 10.5rem;
+  display: inline-flex;
+  align-items: center;
+}
+.login_container .logo img {
+  max-width: 100%;
+}
+.login_container .logo span {
+  font-size: 1.5rem;
+  padding: 0 0 0.5rem 0.2rem;
+}
+.login_container .login_form_container {
+  width: 35rem;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  border: 1px solid #ccc;
+  border-radius: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  margin: 1.5rem 0;
+  padding: 2rem;
+}
+.login_container .login_form_container .heading {
+  font-weight: bold;
+  font-size: 2.2rem;
+}
+.login_container .login_form_container .login_form {
+  width: 100%;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  display: flex;
+  flex-direction: column;
+}
+.login_container .login_form_container .login_form label {
+  font-size: 1.4rem;
+  font-weight: bold;
+  margin: 1rem 0 0.5rem 0;
+}
+.login_container .login_form_container .login_form .inputBox {
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+}
+.login_container .login_form_container .login_form .loginBtn {
+  background-color: #f3ce72;
+  padding: 0.5rem 0;
+  border: 1px solid #000;
+  margin-top: 1.5rem;
+  font-size: 1.4rem;
+  cursor: pointer;
+}
+.login_container .singUp_btn_section {
+  width: 35rem;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+}
+.login_container .singUp_btn_section .question {
+  width: 100%;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  text-align: center;
+  position: relative;
+  color: rgb(182, 182, 182);
+  display: flex;
+  justify-content: center;
+}
+.login_container .singUp_btn_section .question::before {
+  content: "";
+  width: 30%;
+  height: 1px;
+  background-color: #ccc;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  z-index: 0;
+  -webkit-box-reflect: right 130%;
+}
+.login_container .singUp_btn_section .account_create_btn {
+  margin-top: 1rem;
+  padding: 0.5rem 0;
+  width: 100%;
+  cursor: pointer;
+}/*# sourceMappingURL=login.css.map */

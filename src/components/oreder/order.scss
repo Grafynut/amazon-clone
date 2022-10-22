@@ -1,0 +1,99 @@
+.order_section {
+    width: 100%;
+    min-height: 90vh;
+    padding: 1.5rem;
+
+
+    .heaing {
+        font-size: 2rem;
+        padding: 1.5rem 0;
+    }
+
+    .order_noitem_noty {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        a {
+            font-size: 4rem;
+        }
+    }
+
+    .order_items {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1.5rem;
+
+        .order_items_card {
+            width: calc((100% / 2) - 1rem);
+            width: 100%;
+            background-color: #fff;
+            height: auto;
+            column-gap: 1.5rem;
+            padding: 1.5rem;
+
+            .order_details {
+                display: inline-flex;
+                justify-content: space-between;
+                width: 100%;
+                margin-bottom: 0.5rem;
+            }
+
+            .orderItem {
+                width: 100%;
+                min-height: 18rem;
+                height: auto;
+                display: inline-flex;
+                border-top: 1px solid #ccc;
+                border-bottom: 1px solid #ccc;
+                gap: 2rem;
+
+                .left {
+                    width: 20%;
+                    height: max-content;
+                    padding: 1.5rem 0;
+                    display: grid;
+                    place-items: center;
+                    position: relative;
+
+                    img {
+                        max-height: 15rem;
+                        max-width: 100%;
+                    }
+                }
+
+                .right {
+                    width: 80%;
+                    height: max-content;
+                    padding: 1.5rem 0;
+
+                    .item_heading {
+                        font-size: 1.3rem;
+                    }
+
+                    .order_price {
+                        font-size: 1.5rem;
+                        margin-top: 1rem;
+                    }
+                }
+            }
+
+            .order_address {
+                padding: 0.5rem 0;
+                font-size: 1.3rem;
+
+                span {
+                    font-weight: bold;
+                    font-size: inherit;
+                }
+            }
+
+            .order_cencel_button {
+                padding: 0.5rem 1.5rem;
+                margin: 0.5rem;
+                float: right;
+            }
+        }
+    }
+}

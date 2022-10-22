@@ -1,0 +1,162 @@
+.payment {
+  max-width: 50%;
+  margin: 4rem auto;
+  padding: 2.5rem;
+  min-height: 80vh;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  position: relative;
+}
+.payment .main_heading {
+  font-size: 2.5rem;
+  text-align: center;
+  padding-bottom: 0.5rem;
+}
+.payment .heading {
+  font-size: 2rem;
+  margin: 0.5rem 0;
+}
+.payment .add_address {
+  border-top: 1px solid #ccc;
+  margin: 1.5rem 0;
+  position: relative;
+}
+.payment .add_address .address_info {
+  font-size: 1.6rem;
+}
+.payment .add_address .address_form {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.2rem 1.5rem;
+}
+.payment .add_address .address_form .input_Div {
+  width: calc(50% - 0.75rem);
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.payment .add_address .address_form .input_Div label {
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+.payment .add_address .address_form .input_Div .inputBox {
+  border: 0;
+  border-bottom: 1px solid #ccc;
+  outline: unset;
+  padding: 0.5rem;
+  font-size: 1.4rem;
+}
+.payment .add_address .address_form .input_Div .inputBox::-webkit-inner-spin-button,
+.payment .add_address .address_form .input_Div .inputBox ::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+          appearance: none;
+}
+.payment .add_address .address_form .address_save_btn {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  padding: 0.5rem 2.5rem;
+  background-color: lightblue;
+  border-width: 1px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+.payment .add_address .edit_button {
+  position: absolute;
+  top: 0.5rem;
+  width: 2.5rem;
+  height: 2.5rem;
+  display: grid;
+  right: 0;
+  border-radius: 50%;
+  border: 1px solid #ccc;
+  align-items: center;
+  justify-items: center;
+  cursor: pointer;
+  transition: 0.2s;
+}
+.payment .add_address .edit_button:hover {
+  background-color: #ccc;
+}
+.payment .payment_details {
+  border-top: 1px solid #ccc;
+  margin: 1.5rem 0;
+}
+.payment .payment_details .deatils {
+  width: 100%;
+  max-width: 66.8rem;
+  margin: 1rem 0;
+  padding: 1rem;
+  border: 1px solid #ccc;
+}
+.payment .payment_details .deatils .card_details {
+  display: inline-flex;
+  position: relative;
+  width: inherit;
+  justify-content: space-between;
+  align-items: center;
+}
+.payment .payment_details .deatils .card_details .payment_input,
+.payment .payment_details .deatils .card_details .payment_input_expiry,
+.payment .payment_details .deatils .card_details .payment_input_cvc {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  padding: 0.5rem;
+  font-size: 1.4rem;
+  border: 0;
+  outline: none;
+}
+.payment .payment_details .deatils .card_details .payment_input_expiry {
+  width: 6rem;
+}
+.payment .payment_details .deatils .card_details .payment_input_cvc {
+  width: 5rem;
+}
+.payment .payment_details .deatils .card_details .error_card {
+  position: absolute;
+  bottom: 0;
+  transform: translateY(100%);
+}
+.payment .buttons {
+  position: absolute;
+  bottom: 2.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  width: 40%;
+}
+.payment .buttons .cancel_btn,
+.payment .buttons .payment_btn {
+  width: 100%;
+  background-color: rgb(127, 176, 192);
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: normal;
+  border-width: 1px;
+  padding: 0.5rem 2.5rem;
+  border: 1px solid #ccc;
+  cursor: pointer;
+}
+.payment .buttons .cancel_btn:hover,
+.payment .buttons .payment_btn:hover {
+  background-color: rgb(110, 156, 172);
+}
+.payment .buttons .payment_btn {
+  background-color: #FFA41C;
+  font-weight: bold;
+  color: black;
+}
+.payment .buttons .payment_btn:hover {
+  background-color: #e49217;
+}
+.payment .total_price {
+  font-size: 1.5rem;
+}/*# sourceMappingURL=payment.css.map */

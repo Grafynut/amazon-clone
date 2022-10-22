@@ -1,0 +1,293 @@
+$bgcolor: white;
+$hombg: #eaeded;
+
+.home {
+    width: 100%;
+    height: max-content;
+
+
+    .slide {
+        width: 100%;
+        height: max-content;
+        max-height: 60rem;
+        position: absolute;
+        top: 6rem;
+        overflow: hidden;
+
+        &::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            height: 60%;
+            background: linear-gradient(0deg, $hombg 0%, transparent 100%);
+        }
+
+        .slide_area {
+            width: max-content;
+            height: 100%;
+            display: -webkit-box;
+            flex-direction: row;
+            transition: 0.3s;
+
+            .banner {
+                max-width: 100%;
+                max-height: fit-content;
+            }
+        }
+
+        .left,
+        .right {
+            position: absolute;
+            top: 0;
+            left: 2px;
+            padding: 10rem 1.5rem;
+            cursor: pointer;
+
+            &:active {
+                border: 2px solid #000;
+                box-shadow: 0 0 0 1px #fff;
+            }
+
+            .Control_icon {
+                font-size: 4rem;
+            }
+        }
+
+        .right {
+            left: unset;
+            right: 3px;
+        }
+    }
+
+
+    // crads ----------------
+    .body_content_start {
+        width: 100%;
+        height: max-content;
+        padding: 5rem 1.5rem 3rem 1.5rem;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        margin-top: 15%;
+
+        .card_row {
+            width: 100%;
+            height: max-content;
+            display: flex;
+            flex-direction: row;
+            gap: 1.5rem;
+            position: relative;
+
+            .card {
+                width: auto;
+                height: auto;
+                background-color: $bgcolor;
+                padding: 1.5rem;
+                padding-bottom: 3rem;
+                position: inherit;
+
+                .heading {
+                    margin-bottom: 1rem;
+                    font-size: 2.2rem;
+                    margin: 1rem 1.5rem;
+
+                }
+
+                .multi_card {
+                    display: grid;
+                    grid-template-columns: auto auto;
+                    // gap: 1.5rem;
+                    margin: 0 1.5rem;
+                }
+
+                .Card_Image {
+                    width: 100%;
+                    height: max-content;
+
+                    .card_image {
+                        width: 100%;
+                        min-width: 8rem;
+                    }
+
+
+                    .details {
+                        font-size: 1.2rem;
+                    }
+                }
+
+                .para {
+                    position: absolute;
+                    bottom: 1.5rem;
+                    margin: 1.5rem 0 0 1.5rem;
+                    color: #0a778a;
+                    cursor: pointer;
+                    width: max-content;
+                    font-size: 1.3rem;
+
+                    &:active {
+                        color: #0a778a;
+                    }
+                }
+
+            }
+        }
+
+        // scroll block
+        .product_list {
+            width: 100%;
+            padding: 1.5rem 3rem 1rem 3rem;
+            background-color: $bgcolor;
+            position: relative;
+
+            .card {
+                width: 100%;
+                padding-bottom: 5rem;
+                overflow-x: scroll;
+                position: relative;
+                scroll-behavior: smooth;
+
+                &::-webkit-scrollbar {
+                    height: 0.7rem;
+                    cursor: pointer;
+                }
+
+                &::-webkit-scrollbar-thumb {
+                    background-color: transparent;
+                    border-radius: 0.5rem;
+                    transition: 0.5s;
+                }
+
+                &:hover {
+                    &::-webkit-scrollbar-thumb {
+                        background-color: #ccc;
+                    }
+                }
+
+                .card_top {
+                    display: inline-flex;
+                    justify-content: space-between;
+                    position: sticky;
+                    left: 0;
+                    width: 100%;
+
+                    .heading {
+                        margin-bottom: 2rem;
+                        font-size: 2rem;
+                    }
+
+                    .para {}
+                }
+
+                .multi_card {
+                    width: max-content;
+                    display: flex;
+                    flex-direction: row;
+                    gap: 1.5rem;
+                    justify-content: flex-start;
+                }
+
+                .Card_Image {
+                    width: 21rem;
+                    height: max-content;
+                    display: grid;
+                    place-items: center;
+                    cursor: pointer !important;
+                    transition: 0.3s;
+                    padding: 0.5rem;
+
+                    &:hover {
+                        box-shadow: 0 0 5px 2px rgba($color: #363636, $alpha: 0.15);
+                        transform: scale(1.1);
+                    }
+
+                    .card_image_box {
+                        width: 100%;
+                        height: 18rem;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+
+                        .card_image {
+                            max-width: 100%;
+                            max-height: 100%;
+                        }
+                    }
+
+                    .details {
+                        color: #cc0c39;
+                        margin-top: 1rem;
+                        font-weight: bold;
+
+                        span {
+                            background-color: #cc0c39;
+                            color: #fff;
+                            margin-right: 1rem;
+                            padding: 0.5rem 0.5rem;
+                            font-weight: normal;
+                        }
+                    }
+
+                    .price_and_discount {
+                        width: 100%;
+                        height: max-content;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: flex-start;
+                        margin-top: 1rem;
+
+                        .discount_price {
+                            font-size: 1.8rem;
+                            color: #000;
+                        }
+
+                        .actual_price {
+                            color: #919191;
+                            font-weight: normal;
+
+                            span {
+                                text-decoration: line-through;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .left,
+            .right {
+                position: absolute;
+                z-index: 1;
+                top: 50%;
+                left: 0;
+                transform: translateY(-50%);
+                padding: 3.5rem 2rem;
+                background-color: $bgcolor;
+                border-radius: 0.5rem;
+                cursor: pointer;
+                border: solid #ccc;
+                border-width: 2px 2px 2px 0;
+                transition: 0.2s;
+                opacity: 0;
+
+                .control {
+                    font-size: 2rem;
+                }
+            }
+
+            .right {
+                left: unset;
+                right: 0;
+                border-width: 2px 0 2px 2px;
+            }
+
+            &:hover {
+
+                .left,
+                .right {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}

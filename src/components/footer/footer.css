@@ -1,0 +1,19 @@
+html {
+  scroll-behavior: smooth;
+}
+
+.footer {
+  width: 100%;
+  padding: 1rem 1.5rem;
+  background-color: #37475a;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+}
+.footer p {
+  font-size: 1.5rem;
+}
+.footer:hover {
+  background-color: #415268;
+}/*# sourceMappingURL=footer.css.map */

@@ -1,0 +1,22 @@
+html {
+    scroll-behavior: smooth;
+    // transition: 0.3s;
+}
+
+.footer {
+    width: 100%;
+    padding: 1rem 1.5rem;
+    background-color: #37475a;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+
+    p {
+        font-size: 1.5rem;
+    }
+
+    &:hover {
+        background-color: #415268;
+    }
+}

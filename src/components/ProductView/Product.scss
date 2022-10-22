@@ -1,0 +1,167 @@
+.all_products {
+    width: 100%;
+    min-height: 90vh;
+    height: max-content;
+    padding: 1.5rem;
+    position: relative;
+    display: -webkit-box;
+    flex-direction: row;
+
+
+    .top_right_filter {
+        position: absolute;
+        top: 3rem;
+        right: 3rem;
+        z-index: 1;
+
+        .filter {
+            padding: 0.5rem;
+            border-radius: 0.3rem;
+        }
+    }
+
+    .filter_button {
+        padding: 0.5rem;
+        background-color: #fff;
+        display: none;
+        position: absolute;
+        top: 3rem;
+        left: 3rem;
+        z-index: 10;
+        border-width: 1px;
+    }
+
+    .filter_section {
+        width: 15%;
+        height: auto;
+        background-color: #fff;
+        padding: 1.5rem 1rem;
+        display: block;
+
+        .filter_using_box {
+            width: 100%;
+            height: max-content;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            gap: 0.5rem;
+            margin: 1rem 0;
+
+            .inputbox {
+                display: inline-flex;
+                gap: 0.5rem;
+            }
+        }
+    }
+
+    .all_products_List {
+        border-left: 1px solid #ccc;
+        background: #fff;
+        height: auto;
+        width: 85%;
+
+        .product_not_found {
+            font-size: 5rem;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .product_section {
+            width: 100%;
+            height: max-content;
+            padding: 6rem 0 2rem 1.5rem;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5em;
+            position: relative;
+
+            .product_link {
+                width: calc((100% / 4) - 1.8rem);
+                height: auto;
+                position: relative;
+                background-color: #f5f5f5;
+                color: initial;
+                animation: itemView 0.3s linear 1;
+                transition: 0.2s;
+
+                @keyframes itemView {
+                    0% {
+                        opacity: 0;
+                    }
+
+                    100% {
+                        opacity: 1;
+                    }
+                }
+
+            }
+
+            .cardDetails {
+                width: 100%;
+                height: auto;
+                padding: 2rem;
+
+                .image_section {
+                    $height : 30rem;
+                    width: 100%;
+                    height: $height;
+                    padding: 1rem;
+                    border: 1px solid #ebebeb;
+                    background: #fff;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    img {
+                        max-width: 100%;
+                        max-height: calc($height * 0.7);
+                    }
+                }
+
+                .details {
+                    margin-top: 1rem;
+                    text-align: center;
+
+                    .brandName {
+                        font-size: 1.5rem;
+                        text-transform: capitalize;
+                    }
+
+                    .product_details {
+                        font-size: 1.3rem;
+                        font-weight: normal;
+                        text-transform: capitalize;
+                    }
+
+                    .rating {
+                        display: inline-flex;
+                    }
+
+                    .price {
+                        text-align: center;
+
+                        .offer {
+                            width: max-content;
+                            background-color: #cc0c39;
+                            padding: 0.2rem 0.5rem;
+                            color: #fff;
+                            font-weight: normal;
+                        }
+
+                        .discount_price {
+                            font-size: 1.5rem;
+                        }
+
+                        .actual_price {
+                            span {
+                                text-decoration: line-through;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

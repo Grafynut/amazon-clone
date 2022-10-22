@@ -1,0 +1,187 @@
+.header {
+    width: 100%;
+    height: 6rem;
+    background-color: #131921;
+    padding: 0 1.5rem;
+    display: flex;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+
+    /* logo section */
+    .nav_logo {
+        max-width: 13rem;
+        height: auto;
+        display: flex;
+        align-items: center;
+        padding: 1rem 1rem 0 1rem;
+        position: relative;
+        margin-right: 1rem;
+
+        .header_logo {
+            min-width: 30%;
+            object-fit: contain;
+        }
+
+        span {
+            color: #fff;
+            font-size: 1.5rem;
+            font-weight: normal;
+            padding-bottom: 1.2rem;
+            font-weight: normal;
+        }
+    }
+
+    //suggetion
+    .suggetion_box {
+        position: relative;
+        height: 4.5rem;
+
+        .search_suggetion {
+            position: absolute;
+            bottom: 0;
+            transform: translateY(100%);
+            left: 11rem;
+            width: 60.2vw;
+
+            .suggetion_item {
+                background: #fff;
+                padding: 0.3rem 1rem;
+                font-size: 1.4rem;
+                box-shadow: inset 0 0 0 0.5px #ccc;
+                transition: 0.2s;
+                cursor: pointer;
+                margin: 0.2rem 0;
+                text-transform: capitalize;
+
+                &:hover {
+                    background: rgb(224, 224, 224);
+                }
+            }
+        }
+    }
+
+    /* search */
+    .search_box {
+        display: flex;
+        align-items: center;
+        height: 70%;
+        width: 100%;
+        border-radius: 0.7rem;
+        overflow: hidden;
+
+        .select_box {
+            background-color: #f3f3f3;
+            width: max-content;
+            height: 100%;
+            padding-left: 0.8rem;
+
+            .option {
+                min-width: 20rem !important;
+                text-transform: capitalize;
+            }
+        }
+
+        .input_searchBox {
+            width: 100%;
+            height: 100%;
+            display: inline-flex;
+            position: relative;
+
+            .header_searchbar {
+                width: 100%;
+                height: 100%;
+                outline: none;
+                padding: 0 1rem;
+                font-size: 1.6rem;
+            }
+
+            .Search_btn {
+                width: max-content;
+                height: max-content;
+                background-color: #f3a847;
+                display: grid;
+                place-items: center;
+                padding: 0.9rem 1rem;
+                cursor: pointer;
+
+                &:hover {
+                    background-color: #eca446;
+                }
+
+                .searchIcon {
+                    font-size: 3rem !important;
+                }
+            }
+        }
+
+    }
+
+    .black_backgound {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.61);
+        transform: translateY(100%);
+        z-index: -1;
+    }
+
+    /* links */
+
+    .header_nav {
+        width: max-content;
+        height: 100%;
+        display: flex;
+        margin-left: 1rem;
+
+        .header_link {
+            padding: 0.5rem;
+            margin: 0.5rem;
+            display: flex;
+            align-items: center;
+
+            .header_option {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                position: relative;
+
+                span {
+                    color: #fff;
+                    width: max-content;
+                    font-size: 1.4rem;
+                    font-weight: bold;
+
+                    &:first-child {
+                        font-size: 1.1rem;
+                        font-weight: normal;
+                    }
+
+                }
+
+                .shopping_bag {
+                    font-size: 3rem !important;
+                    color: #fff;
+                }
+
+                .shopping_Item_num {
+                    position: absolute;
+                    top: 6%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    background-color: #131921;
+                    padding: 0.1rem;
+
+                }
+            }
+        }
+    }
+
+}
+
+.hover_border:hover {
+    box-shadow: inset 0 0 0 1px #fff;
+}
